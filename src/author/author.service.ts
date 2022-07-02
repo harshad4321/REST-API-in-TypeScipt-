@@ -5,6 +5,7 @@ type Author={
     id:number;
     firstName:string;
     lastName:string;
+     createdAt:Date;
 };
 
 
@@ -14,7 +15,17 @@ type Author={
             id:true,
             firstName:true,
             lastName:true,
+            createdAt :true,
         },
     });
 
  };
+
+ export const getAuthor =async (id:number):Promise<Author | null> =>{
+ return db.author.findUnique({
+    where:{
+        id,
+    },
+ })
+    
+ }
