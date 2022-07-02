@@ -2,7 +2,7 @@
 import {db} from "../utils/db.server"
 import { authorRouter } from "./author.router";
 
-type Author={
+export type Author={
     id:number;
     firstName:string;
     lastName:string;
