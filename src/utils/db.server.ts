@@ -11,3 +11,4 @@ if (!global.__db){
 db= global.__db;
 
 export{db};
+ 
