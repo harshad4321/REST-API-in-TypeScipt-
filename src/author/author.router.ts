@@ -74,11 +74,11 @@ async(request:Request,response:Response)=>{
 }
 );
 //DELETE :Delete an author based on the Id
-authorRouter.delete("/:id ",async(request:Request,response:Response)=>{
+authorRouter.delete("/:id",async(request:Request,response:Response)=>{
     const id:number= parseInt(request.params.id,10);
     try{
         await AuthorService.deleteAuthor(id);
-        return response.status(204).json("Author is successesfully deleted" )
+        return response.status(204).json("Author has been successesfully deleted" );
 
     }catch(error:any){
         return response.status(500).json(error.message);
