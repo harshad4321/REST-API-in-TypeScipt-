@@ -81,4 +81,10 @@ select:{
 
 // delete
 
-//   export  const  delete
+  export  const  deleteAuthor = async(id:number):Promise<void>=>{
+    await db.author.delete({
+        where:{
+            id,
+        },
+    })
+  }
